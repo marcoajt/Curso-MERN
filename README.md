@@ -27,3 +27,19 @@ Instalação do express
 
 - `npm install nodemon` - para atualizar sozinho, sem precisar usar o terminal para inicializar o servidor.
 - Depois de instalar o nodemon, se precissa acressentar no arquivo package.json, embaixo de scripts, `"dev": "nodemon server.js"`. Para rodar o projeto somente digitar `npm run dev`.
+
+## Aula 03 - Estrutura de Pastas no BackEnd - NodeJS
+
+Estruturação do projeto:
+
+- controllers - pasta onde vai ficar os controles da nossa aplicação.
+
+- functions - pasta caso necessite usar algumas funções.
+
+- models - pasta onde vai poder fazer a conexão com o banco de dados.
+- middleware - arquivo para verificar tokens de acesso.
+- routes.js - arquivo onde vai ficar todas as rotas da nossa API.
+- uploads, onde se coloca as images e os arquivos.
+
+## 
+
