@@ -41,5 +41,40 @@ Estruturação do projeto:
 - routes.js - arquivo onde vai ficar todas as rotas da nossa API.
 - uploads, onde se coloca as images e os arquivos.
 
-## 
+## Aula 04 - Conexão com MongoDB
+
+Conexão do servidor NodeJS com o MongoDB
+
+- `npm install mongoose` - driver para conectar o NodeJS com o MongoDB (no projeto).
+
+- Instalar o MongoDB Compass.
+
+  Depois de Instalar:
+
+- `sudo systemctl status mongod` - para verificar o estado do MongDB.
+
+- `sudo systemctl start mongod` - para iniciar o MongoDB, necessario quando usar o MongoDB Compass.
+
+- `sudo systemctl stop mongod` - para parar o MongoDB.
+
+O video está desatualizado, a nova versão não utiliza mais essa versão para inicializar a conexão.
+
+Fontes:
+
+- https://exerror.com/mongoparseerror-options-usecreateindex-usefindandmodify-are-not-supported/
+- https://stackoverflow.com/questions/68958221/mongoparseerror-options-usecreateindex-usefindandmodify-are-not-supported
+
+Solução:
+
+```
+const URI = 'mongodb://localhost:27017/curso-basico-mearn';
+
+mongoose.connect(
+    URI,
+    async(err)=>{
+        if(err) throw err;
+        console.log('MongoDB CONECTADO COM SUCESSO!');
+    }
+)
+```
 
