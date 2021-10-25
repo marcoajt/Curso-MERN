@@ -78,3 +78,45 @@ mongoose.connect(
 )
 ```
 
+## Aula 05 - Cadastro NodeJS com MongoDB
+
+- await - O operador `await` é utilizado para esperar por uma [`Promise`](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise). Ele pode ser usado apenas dentro de uma [`async function`](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function).
+
+  ```
+  let user = await Usuario.findOne({email_usuario});
+  user = await Usuario.create(data);
+  ```
+
+- asyn - A declaração `async function` define uma *função assíncrona*, que retorna um objeto [`AsyncFunction`](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction).
+
+  ```
+  async create(req,res)
+  ```
+
+- Eu fiz diferente a declaração do DataSchema
+
+  ```
+  const DataSchema = new mongoose.Schema({
+      nome_usuario:{type:String, require:true},
+      email_usuario:{type:String, require:true},
+      tipo_usuario:{type:Number, default:1},
+      senha_usuario:{type:String, require:true},
+  }
+  ```
+
+- Quando for testar o Insomnia, se você cadastrar mais de uma vez com o mesmo email, ira retornar error 500. Não esquecer de inicializar o MongoDB e rodar o projeto.
+
+  ```
+  let user = await Usuario.findOne({email_usuario});//para verificas se não existe esse usuario
+          if(!user){
+              data = {nome_usuario,email_usuario,tipo_usuario,senha_usuario};
+              user = await Usuario.create(data);// await e feito para esperar para não criar usuario vazio.
+              return res.status(200).json(user);
+          }else{
+              return res.status(500).json(user);
+          }
+  ```
+
+  
+
+- Para verificar o cadastro do usuário, entre no MongoDB Compass.
