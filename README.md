@@ -134,3 +134,7 @@ mongoose.connect(
 ## Aula 07 - [DELETE] - Exclusão NodeJS com MongoDB
 
 - Delete um usuário pelo Insomnia e use o Index para mostrar a listagem e verificar se foi deletado.
+
+## Aula 08 - [UPDATE] - Atualização NodeJS com MongoDB
+
+- Quando se cria o update, ele funciona normalmente, pórem deve fazer outra função no Modal para a senha ser criptografada novamente.
