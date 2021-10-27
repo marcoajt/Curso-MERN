@@ -78,7 +78,7 @@ mongoose.connect(
 )
 ```
 
-## Aula 05 - Cadastro NodeJS com MongoDB
+## Aula 05 - [CREATE] - Cadastro NodeJS com MongoDB
 
 - await - O operador `await` é utilizado para esperar por uma [`Promise`](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise). Ele pode ser usado apenas dentro de uma [`async function`](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function).
 
@@ -120,3 +120,13 @@ mongoose.connect(
   
 
 - Para verificar o cadastro do usuário, entre no MongoDB Compass.
+
+## Aula 06 - [FIND] - Listagem  NodeJS com MongoDB
+
+- Encontrei um erro na rota, o parametro `id` não estava sendo enviado, então foi colocado na rota de details:
+
+  ```
+  routes.get('/api/usuarios.details/:_id',Usuario.details);
+  ```
+
+  
